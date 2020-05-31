@@ -10,17 +10,20 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
         <link rel="stylesheet" href=" ./dist/css/sm.min.css">
+        <link rel="stylesheet" href="../common/style/flex.css">
+        <link rel="stylesheet" href="../common/style/common.css">
         <link rel="stylesheet" href=" ./dist/css/sm-extend.min.css">
+        <link rel="stylesheet" href="../common/iconfont/iconfont.css">
 
     </head>
     <body>
-        <div class="page-group">
-            <div class="page page-current">
+        <div class="page-group" id="app">
+            <div class="page page-current page__person">
                 <!-- 你的html代码 -->
-                <div class="header">
+                <div class="header flex f-jc-sb f-ai-c">
                     <div>
-                        <div>
-                            <img src="" alt="" class="header__image">
+                        <div class="flex">
+                            <img src="https://cdn.wanwudezhi.com/static/web-static/image/db448bf317293a49029924154026e87f_72x72.png?imageView2/1/w/48/h/48/format/png" alt="" class="header__image">
                             <div>
                                 <div class="header__userName">ceshi </div>
                                 <div class="header__id">id:123456</div>
@@ -28,25 +31,168 @@
                         </div>
                     </div>
                     <div class="header__set">
-                        <img src="" alt="" class="header__image">
+                        <img src="https://cdn.wanwudezhi.com/static/web-static/image/db448bf317293a49029924154026e87f_72x72.png?imageView2/1/w/48/h/48/format/png" alt="" class="header__set--icon">
                         <div>设置</div>
                     </div>
                 </div>
                 <div class="order">
-                    <div class="order__header">
-                        <div>我的订单</div>
-                        <div>查看全部订单</div>
+                    <div class="order__header flex f-ai-c f-jc-sb">
+                        <div class="order__header--title">我的订单</div>
+                        <div>查看全部订单>
+                        </div>
                     </div>
-                    <div class="order__info">
-                        <div ></div>
+                    <div class="order__info flex f-ai-c f-jc-sa">
+                        <div>
+                            <i class="iconfont hshw-icondaifukuan order__info--con"></i>
+                            <div>待付款</div>
+                        </div>
+                        <div>
+                            <i class="iconfont hshw-icondaifahuo order__info--con"></i>
+                            <div>待发货</div>
+                        </div>
+                        <div>
+                            <i class="iconfont hshw-icondaishouhuo order__info--con"></i>
+                            <div>待收货</div>
+                        </div>
+                        <div>
+                            <i class="iconfont hshw-iconyiwancheng order__info--con"></i>
+                            <div>已完成</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section flex f-fw-w">
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconjindutiaoshouyidaozhang order__info--con"></i>
+                        <div>我的收益</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconwodehuimi order__info--con"></i>
+                        <div>我的汇米</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconshouyi order__info--con"></i>
+                        <div>我的余额</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-icontuiguangyonghu order__info--con"></i>
+                        <div>推广用户</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-icontuiguangshangpin order__info--con"></i>
+                        <div>推广商品</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconshoucang-2 order__info--con"></i>
+                        <div>我的收藏</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconshenghuoquan-2 order__info--con"></i>
+                        <div>生活圈</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconkefuzhongxin order__info--con"></i>
+                        <div>客服中心</div>
+                    </div>
+                    <div class="section__wrap">
+                        <i class="iconfont hshw-iconguanyuwomen order__info--con"></i>
+                        <div>关于我们</div>
                     </div>
                 </div>
             </div>
         </div>
-
         <script src='//cdn.bootcss.com/jquery/3.1.1/jquery.min.js'></script>
-        <script src=' ./dist/js/sm.js'></script>
-        <script src=' ./dist/js/sm-extend.js'></script>
-
     </body>
+    <style>
+    .page__person{
+        background: #ccc;
+        width: 100%;
+        height: 100vh;
+    }
+    .header{
+        width: 100%;
+        background:#DD6343;
+        color: #fff;
+        font-size: 16px; 
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .header__image{
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        margin-right: 10px;
+    }
+    .header__userName{
+        margin-bottom: 12px;
+    }
+    .header__set--icon{
+        width: 24px;
+        height: 23px;
+    }
+    .header__set{
+        font-size: 12px;
+        text-align: center;
+    }
+    .order{
+        padding: 0 15px;
+        color: #7F7F7F;
+        font-size: 10px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    .order__header{
+        width: 100%;
+        border-bottom: 1px solid #CCCCCC;
+        line-height: 44px;
+    }
+    .order__header--title{
+        font-size: 12px;
+        color: #191919;
+    }
+    .order__info{
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box;
+        color: #000000;
+        font-size: 10px;
+        text-align: center;
+    }
+    .order__info--con{
+        font-size: 30px;
+        color: #DD6343;
+        margin-bottom: 2px;
+    }
+    .section{
+        text-align: center;
+        width: 100%;
+        background: #fff;
+        margin-top: 4px;
+    }
+    .section__wrap{
+        color: #000000;
+        font-size: 10px;
+        width: 33.1%;
+        height: 94px;
+        text-align: center;
+        padding-top: 25px;
+        border-right: 1px solid #CCCCCC;
+        border-top: 1px solid #CCCCCC;
+    }
+    .section__wrap:nth-child(1){
+        border-top: none;
+    }
+    .section__wrap:nth-child(2){
+        border-top: none;
+    }
+    .section__wrap:nth-child(3){
+        border-top: none;
+        border-right: none;
+    }
+    .section__wrap:nth-child(6){
+        border-right: none;
+    }
+    .section__wrap:nth-child(9){
+        border-right: none;
+    }
+    </style>
 </html>
